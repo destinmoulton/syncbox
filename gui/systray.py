@@ -3,7 +3,7 @@ from PySide2.QtWidgets import QSystemTrayIcon, QMenu, QAction
 from PySide2.QtGui import QIcon
 def systray(qtapp, qtwindow):
     # Create the icon
-    icon = QIcon("assets/graphics/icon.png")
+    icon = QIcon("assets/graphics/systray.png")
 
     # Create the tray
     tray = QSystemTrayIcon()
