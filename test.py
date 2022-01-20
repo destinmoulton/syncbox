@@ -6,7 +6,7 @@ from PySide2.QtCore import Qt
 from PySide2.QtGui import QPixmap, QIcon
 
 from gui.MainWindowView import MainWindowView
-from gui.systray.systray import systray
+from gui.systray import systray
 
 app = QApplication(sys.argv)
 app.setQuitOnLastWindowClosed(False)
