@@ -1,13 +1,20 @@
 
+from appdirs import user_config_dir, user_log_dir
 from PySide2.QtWidgets import QWidget, QLabel, QHBoxLayout, QVBoxLayout, QTabWidget
 from PySide2.QtGui import QPixmap, QIcon
+
+
 class SettingsTab(QWidget):
     def __init__(self):
         super(SettingsTab, self).__init__()
-        testLabel = QLabel("TEST")
+
+
+        configDirLabel = QLabel("Config directory: " + user_config_dir("syncbox"))
+        logDirLabel = QLabel("Log directory: "+user_log_dir("syncbox"))
         mainLayout = QVBoxLayout()
 
-        mainLayout.addWidget(testLabel)
+        mainLayout.addWidget(configDirLabel)
+        mainLayout.addWidget(logDirLabel)
         self.setLayout(mainLayout)
 
     def icon(self):
